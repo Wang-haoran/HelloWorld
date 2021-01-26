@@ -1,13 +1,17 @@
 package com.example.lib;
 
+import java.time.LocalDate;
+
 class Employee implements Comparable<Employee>{
 
     private String name;
     private double salary;
+    private LocalDate hireDay;
 
-    public Employee(String name,double salary) {
+    public Employee(String name,double salary,int year,int month,int day) {
         this.name = name;
         this.salary = salary;
+        hireDay = LocalDate.of(year,month,day);
     }
 
     public String getName() {
@@ -17,6 +21,8 @@ class Employee implements Comparable<Employee>{
     public double getSalary() {
         return salary;
     }
+
+    public LocalDate getHireDay() {return hireDay;}
 
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;

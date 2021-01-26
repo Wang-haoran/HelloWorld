@@ -23,3 +23,28 @@ public class Pair <T>{
         second = newValue;
     }
 }
+/*
+interface Task
+{
+    void run() throws Exception;
+
+    @SuppressWarnings("unchecked")
+    static <T extends Throwable> void ThrowAs (Throwable t) throws T
+    {
+        throw (T) t;
+    }
+
+    static Runnable asRunable(Task task)
+    {
+        return () ->
+        {
+            try {
+                task.run();
+            }
+            catch (Exception e) {
+                Task.<RuntimeException>ThrowAs(e);
+            }
+        };
+    }
+}
+*/
