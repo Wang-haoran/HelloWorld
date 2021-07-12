@@ -3,9 +3,9 @@ package com.example.lib.threads;
 import sun.rmi.runtime.Log;
 
 public class BankTest {
-    public static final int NACCOUNTS = 100;
+    public static final int NACCOUNTS = 10;
     public static final double INITIAL_BANLANCE = 1000;
-    public static final int MAX_AMOUNT = 1000;
+    public static final int MAX_AMOUNT = 2000;
     public static final int DELAY =10;
 
     public static void main(String[] args) {

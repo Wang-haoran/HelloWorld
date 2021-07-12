@@ -2,6 +2,7 @@ package com.example.lib.sync;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.concurrent.atomic.LongAccumulator;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -17,6 +18,8 @@ public class Bank {
         sufficientFund = bankLock.newCondition();
         Arrays.fill(accounts,initialBanlance);
     }
+
+    //LongAccumulator adder = new LongAccumulator(Long::sum,0);
 
     public synchronized void transfer(int from,int to,double amount) throws InterruptedException{
         try {
